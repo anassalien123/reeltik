@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reeltik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-vedio">
+        <div class="vedio">
+            <video src="video/v1.mp4" class="vedio-player" autoplay></video>
+            <div class="footer">
+                <div class="footer-text">
+                    <h3>Reeltik</h3>
+                    <p class="description">welcome to my app</p>
+                    <div class="img-marq">
+                        <img src="images/Up.png">
+                        <marquee>hello world to my app reeltik</marquee>
+                    </div>
+                </div>
+                <img src="images/play.png" class="image-play">
+            </div>
+        </div>
+
+        <div class="vedio">
+            <video src="video/v2.mp4" class="vedio-player"></video>
+            <div class="footer">
+                <div class="footer-text">
+                    <h3>Reeltik</h3>
+                    <p class="description">welcome to my app</p>
+                    <div class="img-marq">
+                        <img src="images/Up.png">
+                        <marquee>hello world to my app reeltik</marquee>
+                    </div>
+                </div>
+                <img src="images/play.png" class="image-play">
+            </div>
+        </div>
+    </div>
+    <script>
+        const vedios = document.querySelectorAll('video');
+        for(const video of vedios){
+            video.addEventListener('click',function(){
+                if(video.paused){
+                    video.play();
+                }else{
+                    video.pause();
+                }
+            })
+        }
+    </script>
+</body>
+</html>
